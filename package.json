@@ -1,0 +1,48 @@
+{
+    "name": "youtube-mcp-server",
+    "version": "0.1.0",
+    "description": "A Model Context Protocol (MCP) server for comprehensive YouTube API integration, enabling AI assistants to interact with YouTube videos, channels, comments, captions, and more.",
+    "main": "build/index.js",
+    "type": "module",
+    "bin": {
+        "youtube-mcp-server": "./build/index.js"
+    },
+    "scripts": {
+        "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+        "dev": "tsc --watch",
+        "start": "node build/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/softreviewed/youtube-mcp-server.git"
+    },
+    "keywords": [
+        "mcp",
+        "youtube",
+        "api",
+        "model-context-protocol",
+        "ai",
+        "assistant",
+        "automation"
+    ],
+    "author": "softreviewed",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/softreviewed/youtube-mcp-server/issues"
+    },
+    "homepage": "https://github.com/softreviewed/youtube-mcp-server#readme",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^0.5.0",
+        "axios": "^1.6.0",
+        "googleapis": "^118.0.0",
+        "open": "^9.1.0",
+        "zod": "^3.22.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "@types/node": "^20.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}
